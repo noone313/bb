@@ -1,2 +1,49 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+using System;
+using System.Dynamic;
+using System.Runtime.CompilerServices;
+
+class computer
+{
+    public string motherboard;
+    private int ram;
+    private string cpu;
+    public computer(string motherboard, string v)
+    {
+        this.motherboard = motherboard;
+    }
+    public computer() { }
+    public int r_a_m
+    {
+        get { return ram; }
+        set { ram = value; }
+
+    }
+    public string getter
+    {
+        get { return cpu; }
+    }
+    public string setter
+    {
+        set { cpu = value; }
+    }
+}
+class program
+{
+    static void Main(string[] args)
+    {
+        int a1 = 8;
+        int a2 = 4;
+        computer computer1 = new computer();
+        computer obj1 = new computer("hp","i7");
+        computer obj2 = new computer("dell", "i5");
+        if (a1 > 0)
+            obj1.r_a_m = a1;
+        if (a2 > 0)
+            obj2.r_a_m = a2;
+        if (obj1.r_a_m > obj2.r_a_m)
+            Console.WriteLine(obj1.r_a_m);
+        else
+            Console.WriteLine(obj2.r_a_m);
+        Console.ReadKey();
+    }
+}
