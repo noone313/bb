@@ -1,0 +1,32 @@
+      org 100h
+
+
+mov al,'m'
+mov dl,al
+mov ah,02h
+int 21h
+
+
+mov al,'m'
+mov dl,al
+mov ah,02h
+int 21h
+
+
+mov al,'m'
+mov dl,al
+mov ah,02h
+int 21h
+
+mov al,'m'
+mov dl,al
+mov ah,02h
+int 21h
+
+
+mov al,'m'
+mov dl,al
+mov ah,02h
+int 21h  
+
+ret
