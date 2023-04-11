@@ -1,0 +1,36 @@
+org 100h
+
+
+call m1
+mov al,50h
+call pp
+;
+jmp cc
+;
+m1:
+
+
+    mov bl,1
+    add bl,40h
+    mov cx,26
+bb:
+  mov dl,bl
+  mov ah,bl
+  int 21h
+  inc bl
+  loop bb
+  ret
+  
+  ;
+pp: mov dl,al
+mov ah,02h
+int 21h
+ret
+
+;
+cc:
+
+  mov al,45h
+  call pp
+  ret 
+  endp      
