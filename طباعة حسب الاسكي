@@ -1,0 +1,22 @@
+org 100h 
+DATA1 DB 100    
+ 
+   SUB BL,BL
+   MOV DL,8
+   MOV AL,DATA1
+AGAIN:
+  ROL AL,1
+  JNC NEXT
+  INC BL
+
+NEXT:
+   DEC DL
+   JNZ AGAIN
+   ADD BL,40H
+   MOV AH,02H
+   MOV DL,BL
+   INT 21H
+   
+   NOP
+   
+RET        
