@@ -1,0 +1,20 @@
+org 100h
+
+mov al,21h
+mov bl,20h
+;
+add bl,al
+;
+mov dl,bl
+aa:
+mov ah,02h
+int 21h
+;
+add dl,1
+mov ah,0
+int 16h
+
+jmp aa:
+mov ah,0
+int 16h
+ret
